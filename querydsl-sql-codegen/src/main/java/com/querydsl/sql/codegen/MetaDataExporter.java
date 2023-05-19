@@ -299,6 +299,9 @@ public class MetaDataExporter {
     }
 
     private void handleColumn(EntityType classModel, String tableName, ResultSet columns) throws SQLException {
+        // Because this getString call is actually delegated to ResultSet.getByte of the oracle
+        // driver pull it up to the first line to avoid 'stream has already been closed.' error
+        // when exporting!
         String columnDefaultValue = columns.getString("COLUMN_DEF");
         String columnName = normalize(columns.getString("COLUMN_NAME"));
         String normalizedColumnName = namingStrategy.normalizeColumnName(columnName);
