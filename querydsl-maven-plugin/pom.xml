@@ -11,6 +11,7 @@
 
     <groupId>com.querydsl</groupId>
     <artifactId>querydsl-maven-plugin</artifactId>
+    <version>5.0.0-oraclestreamfix</version>
     <name>Querydsl - Maven plugin</name>
     <description>Querydsl Maven plugin</description>
     <url>${project.homepage}</url>
@@ -79,7 +80,7 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-sql-codegen</artifactId>
-            <version>${project.version}</version>
+            <version>5.0.0-oraclestreamfix</version>
         </dependency>
 
         <!-- annotations -->
@@ -112,7 +113,7 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-core</artifactId>
-            <version>${project.version}</version>
+            <version>5.0.0</version>
             <scope>test</scope>
             <type>test-jar</type>
         </dependency>
@@ -140,5 +141,17 @@
             </build>
         </profile>
     </profiles>
+    <distributionManagement>
+        <repository>
+            <id>zjcs-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.99.61:8081/nexus/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>zjcs-snapshots</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.99.61:8081/nexus/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

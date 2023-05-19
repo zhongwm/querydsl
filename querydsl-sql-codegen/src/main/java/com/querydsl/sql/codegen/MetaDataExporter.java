@@ -299,6 +299,7 @@ public class MetaDataExporter {
     }
 
     private void handleColumn(EntityType classModel, String tableName, ResultSet columns) throws SQLException {
+        String columnDefaultValue = columns.getString("COLUMN_DEF");
         String columnName = normalize(columns.getString("COLUMN_NAME"));
         String normalizedColumnName = namingStrategy.normalizeColumnName(columnName);
         int columnType = columns.getInt("DATA_TYPE");
@@ -307,7 +308,6 @@ public class MetaDataExporter {
         Number columnDigits = (Number) columns.getObject("DECIMAL_DIGITS");
         int columnIndex = columns.getInt("ORDINAL_POSITION");
         int nullable = columns.getInt("NULLABLE");
-        String columnDefaultValue = columns.getString("COLUMN_DEF");
 
         String propertyName = namingStrategy.getPropertyName(normalizedColumnName, classModel);
         Class<?> clazz = configuration.getJavaType(columnType,

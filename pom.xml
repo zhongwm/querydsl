@@ -15,11 +15,43 @@
     <version>0.1.0</version>
   </parent>
 
+<!--  <modules>-->
+<!--&lt;!&ndash;    <module>querydsl-ant-test</module>&ndash;&gt;-->
+<!--    <module>querydsl-apt</module>-->
+<!--    <module>querydsl-bom</module>-->
+<!--    <module>querydsl-codegen</module>-->
+<!--    <module>querydsl-codegen-utils</module>-->
+<!--    <module>querydsl-collections</module>-->
+<!--    <module>querydsl-core</module>-->
+<!--    <module>querydsl-docs</module>-->
+<!--    <module>querydsl-examples</module>-->
+<!--    <module>querydsl-guava</module>-->
+<!--    <module>querydsl-hibernate-search</module>-->
+<!--    <module>querydsl-jdo</module>-->
+<!--    <module>querydsl-jpa</module>-->
+<!--    <module>querydsl-jpa-codegen</module>-->
+<!--    <module>querydsl-kotlin</module>-->
+<!--    <module>querydsl-kotlin-codegen</module>-->
+<!--    <module>querydsl-lucene3</module>-->
+<!--    <module>querydsl-lucene4</module>-->
+<!--    <module>querydsl-lucene5</module>-->
+<!--    <module>querydsl-maven-plugin</module>-->
+<!--    <module>querydsl-mongodb</module>-->
+<!--    <module>querydsl-scala</module>-->
+<!--    <module>querydsl-spatial</module>-->
+<!--    <module>querydsl-sql</module>-->
+<!--    <module>querydsl-sql-codegen</module>-->
+<!--    <module>querydsl-sql-spatial</module>-->
+<!--    <module>querydsl-sql-spring</module>-->
+<!--  </modules>-->
+  
   <packaging>pom</packaging>
 
   <inceptionYear>2007</inceptionYear>
 
   <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
     <failIfNoTests>false</failIfNoTests>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.homepage>http://www.querydsl.com</project.homepage>
